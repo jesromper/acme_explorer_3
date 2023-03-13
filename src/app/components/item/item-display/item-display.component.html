@@ -1,0 +1,56 @@
+<div class="card mx-auto mt-4" style="width: 18rem">
+  <div class="card-body text-end">
+    <button [hidden]="item.deleted" (click)="removeItem()">
+      <i class="fa-solid fa-trash"></i>
+    </button>
+  </div>
+  <img
+    src="{{ item.picture }}"
+    class="card-img-top mx-auto mt-2 rounded"
+    style="width: 50%; height: 50%"
+  />
+  <div class="card-body mb-2">
+    <h5 class="card-title text-center">{{ item.name }}</h5>
+    <h6 class="card-subtitle text-center text-muted">{{ item.sku }}</h6>
+    <p class="card-text ml-2">{{ item.description }}</p>
+  </div>
+  <div class="card-body">
+    <p
+      class="card-text text-right mr-1 mb-1"
+      [ngClass]="isSpecial ? 'special' : ''"
+    >
+      <strong>{{ "Price:  " }}</strong>
+      <span [ngStyle]="getCurrentStyles()"
+        >&nbsp; {{ item.price }}&nbsp; </span
+      >{{ "EUR" }}
+      <span *ngIf="isSpecial">Deal!</span>
+    </p>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li
+      class="list-group-item"
+      *ngFor="let comment of getComments(); let i = index"
+    >
+      <p class="card-text ml-2 m2-1">{{ i + 1 }}{{ " - " }} {{ comment }}</p>
+    </li>
+  </ul>
+  <div class="card-body" *ngIf="item.deleted; else noDeleted">
+    <span class="card-text text-danger ml-2 nb-1"
+      >This item has been removed</span
+    >
+  </div>
+  <ng-template #noDeleted>
+    <p class="card-body text-muted">
+      Click on the trash icon to remove this item
+    </p>
+  </ng-template>
+  <div class="card-body">
+    <label for="price" class="form-label">{{ "New Price: " }}</label>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="item.price"
+      (keyup)="onKey()"
+    />
+  </div>
+</div>

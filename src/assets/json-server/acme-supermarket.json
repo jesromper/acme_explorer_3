@@ -1,0 +1,26 @@
+{
+  "items": [
+    {
+      "id": "5b11322za90b6581dee5dbc7",
+      "version": 0,
+      "sku": "57-AB32",
+      "name": "Berries mix",
+      "description": "Berry mix has a great harmony of tasty berries.",
+      "price": 6.4,
+      "picture": "../../../assets/img/berries-mix.jpg",
+      "comments": ["Very tasty!", "Great mix!", "Love it!"],
+      "deleted": false
+    },
+    {
+      "id": "4b14322ca9966591dee5dbce",
+      "version": 1,
+      "sku": "11-CZ1V",
+      "name": "Mix Salad",
+      "description": "Spring Mix Salad with Walnut Vinaigrette",
+      "price": 16.99,
+      "picture": "../../../assets/img/mix-salad.jpg",
+      "comments": ["The dressing left a bad taste in your mouth"],
+      "deleted": true
+    }
+  ]
+}

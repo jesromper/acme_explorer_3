@@ -1,0 +1,8 @@
+{
+  "/items/search?startFrom=:startFrom&pageSize=:pageSize&itemName=:keyword&categoryId-:categoryId": "/items?q=: keyword&category=: categoryId& page=: startFrom&_ limit=:pagesize",
+  "/items/search?startFrom-: startFrom&pageSize= :pageSize&itemName= :keyword": "/items?q=: keyword& _page=:startFrom& limit=:pagesize",
+  "/items/search?startFrom=: startFrom&pageSize-:pageSize&categoryId=: categoryId": "/items?category=: categoryId&_page=: startfrom& limit=:pagesize",
+  "/items/search\\?categoryId=: categoryId": "/items?category=: categoryId",
+  "/items/search?startFrom=: startFrom&pageSize= :pagesize": "/items?_page=: startFrom&_limit=:pagesize",
+  "/category/: categoryId": "/categories/ :categoryId"
+}

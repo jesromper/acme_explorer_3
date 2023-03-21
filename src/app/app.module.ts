@@ -12,6 +12,8 @@ import { AngularFireAuth } from 'angularfire2/auth';
 import { RegisterComponent } from './components/security/register/register.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/security/login/login.component';
+import { HeaderComponent } from './components/master/header/header.component';
+import { NotFoundComponent } from './components/shared/not-found/not-found.component';
 
 export const firebaseConfig = {
   apiKey: 'AIzaSyDEyDXvLfEu1B59iAHLvgvWluRYpZRBi3I',
@@ -25,7 +27,7 @@ export const firebaseConfig = {
 };
 
 @NgModule({
-  declarations: [AppComponent, ItemDisplayComponent, ItemListComponent, RegisterComponent, LoginComponent],
+  declarations: [AppComponent, ItemDisplayComponent, ItemListComponent, RegisterComponent, LoginComponent, HeaderComponent, NotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
